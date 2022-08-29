@@ -1,0 +1,78 @@
+CPP
+
+
+Structure :
+Two type : 
+  1. names structure - name of structure giver while defining and then we create structure variable 
+2. Unnamed structure  - no name is given and structure variable is declared at end of declaration
+
+:::(  named structure    ):::
+:::(  there is no naming convention of structure name  or new datatype   ):::
+struct student / Student {
+    string name;
+    int roll;
+    float marks;
+};
+
+:::(  unnamed structure    ):::
+struct {
+    string name;
+    int roll;
+    float marks;
+} s1, s2, s3;
+
+
+int main(){
+	student s1, s2, s3;
+	return 0;
+	}
+
+
+Referencing to variable :
+
+1. without using pointer 
+    1. String s = “string “;
+    2. String &ref_to_s = s 
+    3. Print ref_to_s.  => string
+2. using pointer 
+    1. String s = “string”;
+    2. String *ref_to_s = &s
+    3. Print  *ref_to_s
+
+
+Pointer :
+
+To make a pointer variable simply add (*) as prefix to that variable , if there are multiple variables then simply add (*)as prefix before each variable 
+
+Normal single variable :::(   string s ;  int n ;
+Single Pointer variable :::(   string *p_str ;  int *p_int  
+
+Normal multiple variable. :::(   string s1, s2, s3 ; int n1, n2;
+Multiple pointer variable. :::(    string *p_str1, *p_str2, *p_str3 ; int *p_int1, *p_int2;
+
+Structure variable  :::(   student/Student stud1, stud2;
+Pointer to structure variable  :::(   student *p_stud1, *p_stud2;
+
+Combined normal variable and pointer variable   ::::(   string *p_str1,  s2,  *p_str3   )::(    int n1,  *p_int   )::(    student/Student stud1,  *p_stud1   ):::
+
+::: when (*) is used while declarations its as creation of pointer and referencing to a variable   & if not  used  while declaration it act as dereferencing of a pointer variable 
+
+:::: Accessing  structure pointers elements using ( -> )operator
+
+struct student / Student {
+    string name;
+    int roll;
+    float marks;
+};
+
+int main(){
+Student s1, *p_stud1;
+s1 = {“Pawan “, 69, 77.83}
+p_stud1 = &s1;
+
+s1.name   ==    p_stud1->name;
+s1.roll   ==   p_stud1->roll;
+s1.marks   ==   p_stud1->marks ;
+
+}
+
