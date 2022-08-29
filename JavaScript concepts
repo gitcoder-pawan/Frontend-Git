@@ -1,0 +1,33 @@
+Java script
+1. On the top of js file we must use "use strict"; to avoid error
+2.  By convention variables name should start with small letter and use camel case
+3. Use let and const for bar declaration as these are block scope
+4. String  ::   access - str1[i] , length - str1.length 
+5. String is immutable. So we don't make any changes in string. Either we makes changes in string and store in new variable oR we store in same original variable 
+6. Trim()   ::   let str1 = "   str   " -> nstr1 = str1.trim() oR  str1 = str1.trim()
+7.  toUpperCase()  ::  str1 = st1.toUpperCase() or nstr1 = str1.tiUpperCase and same with toLowerCase
+8. slice(s,e) used to slice and return new a string and  end is excluded.
+9. Data Type  -> number, string, Boolean, null, undefined , typeof (variable) return data type of variable 
+10. Number to string -> (4 +"") oR String(4)
+11. String to Number ->( +"4" ) oR Number("4")
+12. String Concat ::  4 + "6" -> 46, "4"+5 -> 45 , 5+6+"6" -> 116
+
+13. When we declare a variable but don't assign any Value then that variable have Value undefined :::: let and var can be declared but const can't be declared without assigning any value
+
+14. Some false value - null, false, undefined, 0 , ""
+
+15. In stack memory , values are stored but in case of array and object values are stored in heap memory and there reference is stored in stack memory
+
+16. Array - store heterogeneous datatype . Methods : ar.pop() remove and return element from last, ar.push(“item”) , ar.shift() remove and return element from front, ar.unshift(“item) add element from front  ::: const ar1= [“item”, “item2”] , const ar2  = […ar1], const ar3 = […ar2, “item3”] but ar2 = […ar1, “item”] is wrong as we can re-assign the value in the same array as modifier is const. And similarly we can use concat() to merge two array and return three array. Const ar4 = ar1.concat(ar2) . ARRAY METHODS :: .length(), .fill(),[  .forEach(), .map(), .filter() , .reduce()] - return an array , .sort(), [ .every(), .some(), ] - return boolean value  
+
+17.object - store value in key : value pair.  Access - const obj1 = {key1 : “val1”, key2: “val2”}, key3 : key1 : “val1”, key2: “val2”, key4 : [“item”, “item2”] }    obj1.key1 - val1  oR  obj1.key2 - val2 oR obj1.key3 - {key1 : “val1”, key2: “val2”} , obj1.key4 - [“item”, “item2”]. Adding element - obj1.newKey = “newValue”.  By default object key in js is string. And we can also write key in string like obj = {“key5” : “value5”} and access obj.key5 - value5 oR obj[“key5”] - value5 but when key is “key key5” then we can’t access using dot we need to use [“key key5”]. Object.keys({objName}) returns a list of keys. We can iterate over this list to access elements. Object.Values({objName}) return a list of object values. making object when key is stored in variable Key1 = “k1” key2 = “k2” val1 = “v1” val2 =“v2” — { [key1] : val1 , [key2] : val2 }. We can’t have duplicate keys in objects if we do so then new value will override the previous val. 
+
+18. Spread Operator ( … ) =  it spread all elements of a iterables. Like str1 = “abc” , spreadStr = […str1] - [“a”, “b”, “c”], ar1 = [1,2,3] spreadAr1 = […ar1, 4, 5] - [1,2,3, 4, 5] same with object. If we spread list inside object then by default number key will be generated starting from 0 . Like obj = {…”abc”} - {0:”a”, 1:”b”, 2:”c”} oR {…[11,22,33]} - {0:11, 1:22, 2:33}
+19. Destructuring  - in object by default we destructure object with same key but we change the variable name.  Const { key1 , key2 } = {key1: “val1”, key2: “val2” } - by default but we can change the name -  const  { key1:k1, key2:k2 } = {key1: “val1”, key2: “val2” } now there is  no key1 and key2 exists instead k1 and k2 exists. If we try to access key1 and key2 it will throw  reference error .  Const { key1 , key2 , …rest} = {key1: “val1”, key2: “val2”, key1: “val3”, key2: “val4” } now rest contains object with key key3 and key4. Same we can do with array.  We can do the default destructuring ::  https://zaiste.net/posts/javascript-destructuring-assignment-default-values/.  ::
+20. Nested destructuring : const ar1 = [{key1: “val1”, key2: “val2”, },{key11: “val11”, key22: “val22”, },{key111: “val111”, key222: “val222”, }]. => first we need to destructure array so we will use [] then we need to destructure object we will use {} and if we want to skip any object the we will simply keep empty .     Const [ {ke1} , , {key222:KEY2} ] = ar1     KEY2 is the new key overriding the key222
+21. FUNCTION :::::::: We can’t declare the same function name more than once in same scope. We can store function declaration in a variable and treat that variable as function . Like const func1 (input) { //some operation  return output };  . Arrow Function : const func1 = (input) => { // some operation return output } , REST PARAMETER IN FUNCTION - when we pass actual parameter more than the formal parameter then we handle the rest actual parameter using (…) operator.      const func1 = (input, …rest) => { // some operation return output }  callFunction : func1(1,2,3,4,5,6) -> input = 1 , rest = [2,3,4,5,6] OR  const func1 = (…rest) => { // some operation return output}    ::: calling function - func1(1,2,3,4,5,6) then rest = [1,2,3,4,5,6]
+22. HOISTING       :::        
+23. LEXICAL SCOPE        :::        we can access the variable and function from parent and grandparent scope called lexical scope  but can’t access function or variable from child scope. Let and const are block scope but var is  function scope.
+24. Optional chaining (?.).      :::  if we want to access value from  objects and that key is either does not exist or undefined or null then we use this to prevent reference error . Like obj = {} > obj.key1 - will three error but obj?.key1  gives undefined I.e if .key exist then it will give key value else undefined.
+25. 
+
