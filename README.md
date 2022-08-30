@@ -5,6 +5,7 @@ https://github.com/tchapi/markdown-cheatsheet/blob/master/README.md
 ## FrontEnd Helper ##
 
 * Rendering web page in browser https://blog.logrocket.com/how-browser-rendering-works-behind-scenes
+* DOM vs Virtual DOM https://www.google.com/amp/s/www.geeksforgeeks.org/reactjs-virtual-dom/amp/
 * UI Components - Refer to material-ui  https://mui.com/
 * JS ShortHand https://blog.logrocket.com/16-useful-typescript-javascript-shorthands-know
 * useAXIOS https://dev.to/ms_yogii/useaxios-a-simple-custom-hook-for-calling-apis-using-axios-2dkj
