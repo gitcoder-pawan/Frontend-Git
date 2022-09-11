@@ -2,6 +2,11 @@
 
 https://github.com/tchapi/markdown-cheatsheet/blob/master/README.md
 
+## REFERENCES ##
+
+* JAVASCRIPT - https://youtube.com/c/Harshitvashisth
+* REACTJS - https://youtube.com/c/Bitfumes
+
 ## FrontEnd Helper ##
 
 * Rendering web page in browser https://blog.logrocket.com/how-browser-rendering-works-behind-scenes
