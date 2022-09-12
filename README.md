@@ -30,6 +30,6 @@ https://github.com/tchapi/markdown-cheatsheet/blob/master/README.md
 * Fetch all repo ::   git fetch —all
 * Create new branch and switched to it ::   git checkout -b (branch name)
 * GIT STASH -  If u have already done some changes on a particular branch and u want to switch to some other branches then 
-  * git stash ::  stored in stash memory 
+  * git stash ::  all the chnages will be stored in stash memory but not new file created as it will be remain there if we switch the branch
   * git checkout -b (branch name) :: now switched to some other branch 
   * git stash pop :: to pop from stash memory 
